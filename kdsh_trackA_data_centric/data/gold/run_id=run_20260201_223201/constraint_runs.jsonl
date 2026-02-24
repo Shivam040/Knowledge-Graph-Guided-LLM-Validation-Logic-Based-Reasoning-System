@@ -1,0 +1,140 @@
+{"id": 46, "status": "SAT", "violations": [], "supporting_triples": ["t_00001", "t_00002"], "confidence": 0.8075, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 137, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 74, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 109, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 104, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 35, "status": "SAT", "violations": [], "supporting_triples": ["t_00004", "t_00003"], "confidence": 0.81, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 18, "status": "SAT", "violations": [], "supporting_triples": ["t_00005"], "confidence": 0.7987, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 31, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 68, "status": "SAT", "violations": [], "supporting_triples": ["t_00007", "t_00006"], "confidence": 0.8313, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 9, "status": "SAT", "violations": [], "supporting_triples": ["t_00008", "t_00009"], "confidence": 0.7972, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 84, "status": "SAT", "violations": [], "supporting_triples": ["t_00011", "t_00010"], "confidence": 0.8318, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 83, "status": "SAT", "violations": [], "supporting_triples": ["t_00012"], "confidence": 0.8041, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 134, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 88, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 67, "status": "SAT", "violations": [], "supporting_triples": ["t_00014", "t_00013"], "confidence": 0.8188, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 112, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 79, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 55, "status": "SAT", "violations": [], "supporting_triples": ["t_00016", "t_00015"], "confidence": 0.8522, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 12, "status": "SAT", "violations": [], "supporting_triples": ["t_00018", "t_00017"], "confidence": 0.8461, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 13, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 102, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 92, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 1, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 11, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 65, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 107, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 66, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 89, "status": "SAT", "violations": [], "supporting_triples": ["t_00019"], "confidence": 0.7835, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 34, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 99, "status": "SAT", "violations": [], "supporting_triples": ["t_00020"], "confidence": 0.8126, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 123, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 116, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 43, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 108, "status": "SAT", "violations": [], "supporting_triples": ["t_00021"], "confidence": 0.811, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 128, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 29, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 69, "status": "SAT", "violations": [], "supporting_triples": ["t_00022"], "confidence": 0.7895, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 50, "status": "SAT", "violations": [], "supporting_triples": ["t_00024", "t_00023"], "confidence": 0.8802, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 5, "status": "SAT", "violations": [], "supporting_triples": ["t_00025", "t_00026"], "confidence": 0.8689, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 39, "status": "SAT", "violations": [], "supporting_triples": ["t_00027"], "confidence": 0.7934, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 19, "status": "SAT", "violations": [], "supporting_triples": ["t_00028"], "confidence": 0.8091, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 113, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 139, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 71, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 26, "status": "SAT", "violations": [], "supporting_triples": ["t_00029"], "confidence": 0.7976, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 117, "status": "SAT", "violations": [], "supporting_triples": ["t_00031", "t_00030"], "confidence": 0.8289, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 6, "status": "SAT", "violations": [], "supporting_triples": ["t_00033", "t_00032"], "confidence": 0.8715, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 76, "status": "SAT", "violations": [], "supporting_triples": ["t_00034"], "confidence": 0.8183, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 17, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 20, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 10, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 122, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 62, "status": "SAT", "violations": [], "supporting_triples": ["t_00036", "t_00035"], "confidence": 0.8727, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 36, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 73, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 98, "status": "SAT", "violations": [], "supporting_triples": ["t_00037"], "confidence": 0.7791, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 25, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 120, "status": "SAT", "violations": [], "supporting_triples": ["t_00038"], "confidence": 0.8114, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 105, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 57, "status": "SAT", "violations": [], "supporting_triples": ["t_00039"], "confidence": 0.8292, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 106, "status": "SAT", "violations": [], "supporting_triples": ["t_00040"], "confidence": 0.7707, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 118, "status": "SAT", "violations": [], "supporting_triples": ["t_00041"], "confidence": 0.8169, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 126, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 4, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 125, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 40, "status": "SAT", "violations": [], "supporting_triples": ["t_00042"], "confidence": 0.8203, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 96, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 45, "status": "SAT", "violations": [], "supporting_triples": ["t_00043"], "confidence": 0.8036, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 54, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 8, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 32, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 14, "status": "SAT", "violations": [], "supporting_triples": ["t_00045", "t_00044"], "confidence": 0.8119, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 63, "status": "SAT", "violations": [], "supporting_triples": ["t_00046"], "confidence": 0.8031, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 41, "status": "SAT", "violations": [], "supporting_triples": ["t_00047", "t_00048"], "confidence": 0.8092, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 23, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 90, "status": "SAT", "violations": [], "supporting_triples": ["t_00049"], "confidence": 0.8156, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 100, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 138, "status": "SAT", "violations": [], "supporting_triples": ["t_00050"], "confidence": 0.8372, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 130, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 48, "status": "SAT", "violations": [], "supporting_triples": ["t_00051"], "confidence": 0.823, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 95, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 136, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 59, "status": "SAT", "violations": [], "supporting_triples": ["t_00052"], "confidence": 0.8121, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 60, "status": "SAT", "violations": [], "supporting_triples": ["t_00053"], "confidence": 0.8378, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 124, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 111, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 135, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 27, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 110, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 42, "status": "SAT", "violations": [], "supporting_triples": ["t_00054", "t_00055", "t_00056"], "confidence": 0.8088, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 56, "status": "SAT", "violations": [], "supporting_triples": ["t_00057", "t_00058"], "confidence": 0.7946, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 80, "status": "SAT", "violations": [], "supporting_triples": ["t_00060", "t_00059"], "confidence": 0.8262, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 28, "status": "SAT", "violations": [], "supporting_triples": ["t_00062", "t_00061"], "confidence": 0.8122, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 101, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 91, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 24, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 119, "status": "SAT", "violations": [], "supporting_triples": ["t_00063"], "confidence": 0.8216, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 93, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 72, "status": "SAT", "violations": [], "supporting_triples": ["t_00064"], "confidence": 0.8047, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 16, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 30, "status": "SAT", "violations": [], "supporting_triples": ["t_00067", "t_00066", "t_00065"], "confidence": 0.8118, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 97, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 22, "status": "SAT", "violations": [], "supporting_triples": ["t_00068"], "confidence": 0.8287, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 53, "status": "SAT", "violations": [], "supporting_triples": ["t_00069"], "confidence": 0.871, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 58, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 81, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 47, "status": "SAT", "violations": [], "supporting_triples": ["t_00072", "t_00073", "t_00071"], "confidence": 0.8607, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 7, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 121, "status": "SAT", "violations": [], "supporting_triples": ["t_00074"], "confidence": 0.8139, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 129, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 51, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 127, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 133, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 52, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 114, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 2, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 33, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 15, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 82, "status": "SAT", "violations": [], "supporting_triples": ["t_00076", "t_00075"], "confidence": 0.8384, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 37, "status": "SAT", "violations": [], "supporting_triples": ["t_00077"], "confidence": 0.7971, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 3, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 103, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 94, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 85, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 21, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 49, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 140, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 64, "status": "SAT", "violations": [], "supporting_triples": ["t_00078"], "confidence": 0.7971, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 131, "status": "SAT", "violations": [], "supporting_triples": ["t_00079"], "confidence": 0.8305, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 61, "status": "SAT", "violations": [], "supporting_triples": ["t_00080"], "confidence": 0.8661, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 86, "status": "SAT", "violations": [], "supporting_triples": ["t_00081"], "confidence": 0.8417, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 38, "status": "SAT", "violations": [], "supporting_triples": ["t_00082", "t_00083"], "confidence": 0.8481, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 132, "status": "SAT", "violations": [], "supporting_triples": ["t_00084"], "confidence": 0.7742, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 77, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 70, "status": "SAT", "violations": [], "supporting_triples": ["t_00086", "t_00087", "t_00085"], "confidence": 0.8289, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 115, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 78, "status": "SAT", "violations": [], "supporting_triples": ["t_00088", "t_00089", "t_00090"], "confidence": 0.8499, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 87, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 75, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}
+{"id": 44, "status": "SAT", "violations": [], "supporting_triples": [], "confidence": 0.0, "solver": "rule_engine_v1", "run_id": "run_20260201_223201"}

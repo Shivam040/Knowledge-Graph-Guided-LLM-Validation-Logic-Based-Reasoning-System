@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.kdsh_trackA_data_centric/
+kdsh_trackA_data_centric/
+data/
+*.zip
+*.csv
+novels/

@@ -1,0 +1,3 @@
+book_name,file_name,file_path,sha256,encoding,byte_len,ingest_ts,run_id
+In search of the castaways,In search of the castaways.txt,/workspace/kdsh_trackA_data_centric/data/bronze/novels/In search of the castaways.txt,3d8a7848eac10d7acb87a05b5e83726180ba7de6191536895641c483437563d5,utf-8,844953,2026-01-12T11:15:12.986733+05:30,run_20260112_111511
+The Count of Monte Cristo,The Count of Monte Cristo.txt,/workspace/kdsh_trackA_data_centric/data/bronze/novels/The Count of Monte Cristo.txt,bb159642124f279a726161e5df500aa017be6fd911435ddad19da10847957c8f,utf-8,2787166,2026-01-12T11:15:13.468964+05:30,run_20260112_111511

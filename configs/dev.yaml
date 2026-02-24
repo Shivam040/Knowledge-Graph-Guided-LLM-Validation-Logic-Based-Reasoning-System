@@ -1,0 +1,27 @@
+chunking:
+  window_words: 350
+  overlap_words: 50
+  min_chunk_words: 120
+  chapter_regex: "(?im)^(chapter|chapitre)\b.*$"
+
+retrieval:
+  k: 12
+  candidate_pool: 80
+  max_per_chapter: 12
+  enforce_buckets: False
+  backend: "bm25"   # or "pathway"
+
+verifier:
+  backend: mnli
+  model_name: MoritzLaurer/DeBERTa-v3-base-mnli-fever-anli
+  batch_size: 16
+  device: auto
+  score_mix_alpha: 0.15
+  min_fact_conf: 0.40
+
+
+kg:
+  min_fact_conf: 0.65
+
+aggregation:
+  contradiction_penalty: 2.0

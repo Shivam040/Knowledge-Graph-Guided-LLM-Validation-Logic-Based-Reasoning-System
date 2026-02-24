@@ -1,0 +1,141 @@
+id,split,prediction,evidence_score,support_weight,contradict_weight,neutral_weight,support_n,contradict_n,neutral_n,status,hard_violations,soft_violations,logic_conf,rationale
+2,test,0,0.0,0.0,0.0,27.77695302225302,0,0,36,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+3,test,0,0.0,0.0,0.0,19.487953526268786,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+7,test,0,-1.7478242952942564,0.0,0.8739121476471282,26.602476481179142,0,1,35,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+15,test,0,0.0,0.0,0.0,8.760795696106447,0,0,12,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+16,test,0,0.0,0.0,0.0,19.53744656345647,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+21,test,0,0.0,0.0,0.0,17.53846174673297,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+22,test,1,0.703303042539471,0.703303042539471,0.0,28.61448281798119,1,0,35,SAT,0,0,0.8287,Evidence supports the backstory claims; no hard contradictions detected.
+24,test,0,0.0,0.0,0.0,19.34420366513854,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+27,test,0,-2.05624399910501,0.4753074840805814,1.2657757415927957,16.559542211011532,1,2,21,SAT,0,0,0.7831,Mixed evidence (support + contradict); prediction uses score/threshold.
+28,test,1,2.0644639986410303,3.496006745720432,0.715771373539701,31.46671364025589,6,1,41,SAT,0,0,0.8122,Mixed evidence (support + contradict); prediction uses score/threshold.
+30,test,1,2.181942418605246,3.32998613023997,0.5740218558173621,32.68501593084808,6,1,41,SAT,0,0,0.8118,Mixed evidence (support + contradict); prediction uses score/threshold.
+33,test,0,0.0,0.0,0.0,9.836020264796542,0,0,12,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+37,test,1,3.9523280826095224,3.9523280826095224,0.0,51.203878894730614,7,0,65,SAT,0,0,0.8258,Evidence supports the backstory claims; no hard contradictions detected.
+38,test,1,2.4774101201620313,2.4774101201620313,0.0,25.729865774627296,4,0,32,SAT,0,0,0.8481,Evidence supports the backstory claims; no hard contradictions detected.
+42,test,0,-0.39965564910259976,2.285200673023676,1.342428161063138,24.363853271783583,4,2,30,SAT,0,0,0.8093,Mixed evidence (support + contradict); prediction uses score/threshold.
+44,test,1,1.6827701051990824,1.6827701051990824,0.0,26.762591546700232,3,0,33,SAT,0,0,0.82,Evidence supports the backstory claims; no hard contradictions detected.
+47,test,1,1.0791458483692846,3.412681665335449,1.1667679084830822,12.098081761973882,5,2,17,SAT,0,0,0.8607,Mixed evidence (support + contradict); prediction uses score/threshold.
+49,test,0,-3.246118158486125,0.0,1.6230590792430626,8.168558659507081,0,2,10,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+51,test,0,-1.2382501480202273,1.1553008416645436,1.1967754948423854,14.084360765722945,2,2,20,SAT,0,0,0.8242,Mixed evidence (support + contradict); prediction uses score/threshold.
+52,test,0,-3.307198499378694,0.553970869581093,1.9305846844798935,15.293365841691893,1,3,20,SAT,0,0,0.82,Mixed evidence (support + contradict); prediction uses score/threshold.
+53,test,0,-3.3072654510598687,2.6472581648174947,2.9772618079386817,20.427315937766924,4,4,28,SAT,0,0,0.871,Mixed evidence (support + contradict); prediction uses score/threshold.
+56,test,1,2.767511043628147,2.767511043628147,0.0,16.077959454401846,4,0,20,SAT,0,0,0.878,Evidence supports the backstory claims; no hard contradictions detected.
+58,test,0,-1.142070906774297,2.6521319624824056,1.8971014346283512,22.36164143058126,4,3,29,SAT,0,0,0.8727,Mixed evidence (support + contradict); prediction uses score/threshold.
+59,test,0,-0.41689941058168856,2.082946850161759,1.2499231303717238,14.369344676392217,3,2,19,SAT,0,0,0.8695,Mixed evidence (support + contradict); prediction uses score/threshold.
+60,test,0,-0.8144644960147807,0.7492074505107931,0.7818359732627869,17.237862248216246,1,1,22,SAT,0,0,0.8378,Mixed evidence (support + contradict); prediction uses score/threshold.
+61,test,0,-3.015456520337035,1.5913421537038361,2.3033993370204358,15.136337355456604,2,3,19,SAT,0,0,0.8661,Mixed evidence (support + contradict); prediction uses score/threshold.
+64,test,1,0.42971248154002684,1.543536337604645,0.556911928032309,24.32757647434494,3,1,32,SAT,0,0,0.7971,Mixed evidence (support + contradict); prediction uses score/threshold.
+70,test,0,-0.47895896957397444,1.9615368635416246,1.2202479165577995,35.30648267356472,3,2,43,SAT,0,0,0.8289,Mixed evidence (support + contradict); prediction uses score/threshold.
+72,test,1,0.22521473984467677,1.0872374583465814,0.4310113592509523,17.68281862147101,2,1,21,SAT,0,0,0.8047,Mixed evidence (support + contradict); prediction uses score/threshold.
+75,test,1,1.284772820230085,1.284772820230085,0.0,30.147201567403656,2,0,34,SAT,0,0,0.8351,Evidence supports the backstory claims; no hard contradictions detected.
+77,test,0,0.0,0.0,0.0,10.01989590579171,0,0,12,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+78,test,1,0.6949066422658858,3.1659456061408275,1.2355194819374709,43.32235575254138,5,2,53,SAT,0,0,0.8499,Mixed evidence (support + contradict); prediction uses score/threshold.
+80,test,1,3.317052090324615,3.317052090324615,0.0,54.93709016217757,5,0,67,SAT,0,0,0.8355,Evidence supports the backstory claims; no hard contradictions detected.
+81,test,0,-1.7683423355894567,1.8487522635115101,1.8085472995504834,35.31388100197215,3,2,43,SAT,0,0,0.8215,Mixed evidence (support + contradict); prediction uses score/threshold.
+82,test,1,1.9230488279593962,1.9230488279593962,0.0,27.15191994128087,3,0,33,SAT,0,0,0.8384,Evidence supports the backstory claims; no hard contradictions detected.
+85,test,0,-0.5657570768347892,0.6466122697838631,0.6061846733093261,17.26898279218835,1,1,22,SAT,0,0,0.8173,Mixed evidence (support + contradict); prediction uses score/threshold.
+86,test,1,1.988711095367338,1.988711095367338,0.0,28.724118851121258,3,0,33,SAT,0,0,0.8417,Evidence supports the backstory claims; no hard contradictions detected.
+87,test,1,0.5393321133575155,0.5393321133575155,0.0,27.862950102814736,1,0,35,SAT,0,0,0.7959,Evidence supports the backstory claims; no hard contradictions detected.
+91,test,0,-6.899877023710589,0.6696142552781118,3.7847456394943504,21.79575490983043,1,5,30,SAT,0,0,0.8219,Mixed evidence (support + contradict); prediction uses score/threshold.
+93,test,0,-3.2067267700322537,0.0,1.6033633850161269,16.8987322622881,0,2,22,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+94,test,0,-1.912180531024933,0.0,0.9560902655124665,17.48697194075579,0,1,23,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+95,test,0,-7.434909413156399,0.0,3.7174547065781995,21.22048167225633,0,5,31,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+97,test,1,0.5636105260825811,0.5636105260825811,0.0,17.789706509063084,1,0,23,SAT,0,0,0.8007,Evidence supports the backstory claims; no hard contradictions detected.
+101,test,0,-4.0355468271411885,0.6657684731323583,2.3506576501367733,15.807092313963647,1,3,20,SAT,0,0,0.8212,Mixed evidence (support + contradict); prediction uses score/threshold.
+103,test,0,0.0,0.0,0.0,19.271539170059043,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+110,test,0,-3.857674124137919,0.0,1.9288370620689594,25.618874671118725,0,3,33,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+111,test,0,0.0,0.0,0.0,9.25906602784794,0,0,12,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+114,test,0,-1.8046776053932552,0.0,0.9023388026966276,18.633052786282573,0,1,23,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+115,test,0,-1.740499003262143,0.0,0.8702495016310715,19.17376140214694,0,1,23,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+119,test,0,-1.1844823189376017,1.9767270575720417,1.5806046882548217,13.440544367965739,3,2,19,SAT,0,0,0.8229,Mixed evidence (support + contradict); prediction uses score/threshold.
+121,test,0,-0.13383602300691666,1.389776499922749,0.7618062614648329,14.242878594744154,2,1,21,SAT,0,0,0.8401,Mixed evidence (support + contradict); prediction uses score/threshold.
+124,test,0,-3.2862024968248167,0.0,1.6431012484124083,7.702845369484082,0,2,10,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+127,test,0,0.0,0.0,0.0,9.575332872097997,0,0,12,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+129,test,0,-10.776509143328937,0.0,5.3882545716644685,3.5193107564194497,0,7,5,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+131,test,1,0.7125721882420826,0.7125721882420826,0.0,17.987165211327643,1,0,23,SAT,0,0,0.8305,Evidence supports the backstory claims; no hard contradictions detected.
+132,test,0,-0.9322870128200652,0.4311221000549278,0.6817045564374965,18.10261173478696,1,1,22,SAT,0,0,0.7742,Mixed evidence (support + contradict); prediction uses score/threshold.
+133,test,0,-4.185422597588159,0.0,2.0927112987940797,14.997373445386437,0,3,21,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+135,test,0,-1.3131660578206652,0.0,0.6565830289103326,27.810742669628034,0,1,35,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+136,test,0,-4.0028186281542775,0.613493787984175,2.308156208069226,15.323902155134439,1,3,20,SAT,0,0,0.8107,Mixed evidence (support + contradict); prediction uses score/threshold.
+140,test,0,0.0,0.0,0.0,18.021190234232254,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+1,train,0,0.0,0.0,0.0,28.3514992948562,0,0,36,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+4,train,0,-1.1101704599988738,0.0,0.5550852299994369,16.440065293080952,0,1,23,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+5,train,1,0.8106257820705391,1.948839727857063,0.569106972893262,16.08431465139119,3,1,20,SAT,0,0,0.8689,Mixed evidence (support + contradict); prediction uses score/threshold.
+6,train,1,2.112914521303842,3.5676427070224266,0.7273640928592923,31.766380261401547,6,1,41,SAT,0,0,0.8715,Mixed evidence (support + contradict); prediction uses score/threshold.
+8,train,0,0.0,0.0,0.0,19.63394464922069,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+9,train,1,1.0130591895480385,1.0130591895480385,0.0,17.189503047794183,2,0,22,SAT,0,0,0.7972,Evidence supports the backstory claims; no hard contradictions detected.
+10,train,1,0.394484870056524,0.394484870056524,0.0,17.273455314814207,1,0,23,SAT,0,0,0.7669,Evidence supports the backstory claims; no hard contradictions detected.
+11,train,0,0.0,0.0,0.0,18.930443654857957,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+12,train,0,-0.5148882094467966,1.3029634022623258,0.9089258058545612,16.472812294774524,2,1,21,SAT,0,0,0.8461,Mixed evidence (support + contradict); prediction uses score/threshold.
+13,train,0,0.0,0.0,0.0,18.90752604401399,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+14,train,1,3.2664772138214984,3.2664772138214984,0.0,24.730299131513203,6,0,30,SAT,0,0,0.8186,Evidence supports the backstory claims; no hard contradictions detected.
+17,train,0,0.0,0.0,0.0,42.08204271035733,0,0,48,SAT,0,0,0.8634,No supporting evidence; defaulting to 0.
+18,train,1,0.5533455751499287,0.5533455751499287,0.0,28.61063088908826,1,0,35,SAT,0,0,0.7987,Evidence supports the backstory claims; no hard contradictions detected.
+19,train,1,0.6055618058687968,0.6055618058687968,0.0,18.478194522879782,1,0,23,SAT,0,0,0.8091,Evidence supports the backstory claims; no hard contradictions detected.
+20,train,0,0.0,0.0,0.0,19.673741820090424,0,0,24,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+23,train,1,0.5344157049695963,0.5344157049695963,0.0,28.373215834488747,1,0,35,SAT,0,0,0.8051,Evidence supports the backstory claims; no hard contradictions detected.
+25,train,1,0.5363692209721329,0.5363692209721329,0.0,18.347119209099954,1,0,23,SAT,0,0,0.7953,Evidence supports the backstory claims; no hard contradictions detected.
+26,train,1,1.624637496628312,1.624637496628312,0.0,35.89948248399203,3,0,45,SAT,0,0,0.8001,Evidence supports the backstory claims; no hard contradictions detected.
+29,train,1,0.5390464757495913,0.5390464757495913,0.0,8.674175863953241,1,0,11,SAT,0,0,0.7958,Evidence supports the backstory claims; no hard contradictions detected.
+31,train,1,1.7604091857470738,1.7604091857470738,0.0,25.91108214424418,3,0,33,SAT,0,0,0.8097,Evidence supports the backstory claims; no hard contradictions detected.
+32,train,0,-0.7350608703099186,1.174698768692438,0.9548798195011783,15.660281805432508,2,2,20,SAT,0,0,0.8109,Mixed evidence (support + contradict); prediction uses score/threshold.
+34,train,1,0.6713677997735015,0.6713677997735015,0.0,19.206576225778086,1,0,23,SAT,0,0,0.8223,Evidence supports the backstory claims; no hard contradictions detected.
+35,train,1,0.5007385099374462,1.624095102714275,0.5616782963884144,25.797695650547738,3,1,32,SAT,0,0,0.81,Mixed evidence (support + contradict); prediction uses score/threshold.
+36,train,1,0.5576977142828324,0.5576977142828324,0.0,8.86456000526594,1,0,11,SAT,0,0,0.7995,Evidence supports the backstory claims; no hard contradictions detected.
+39,train,1,1.1320866856635061,1.1320866856635061,0.0,27.81691832564013,2,0,34,SAT,0,0,0.809,Evidence supports the backstory claims; no hard contradictions detected.
+40,train,1,1.187103854558082,1.187103854558082,0.0,17.564584560653543,2,0,22,SAT,0,0,0.8203,Evidence supports the backstory claims; no hard contradictions detected.
+41,train,1,1.1847689241986323,1.1847689241986323,0.0,26.861468865220196,2,0,34,SAT,0,0,0.8092,Evidence supports the backstory claims; no hard contradictions detected.
+43,train,0,-1.4885633166208492,1.176726698282061,1.332645007451455,15.531229050662382,2,2,20,SAT,0,0,0.8166,Mixed evidence (support + contradict); prediction uses score/threshold.
+45,train,0,-0.19357575043825137,1.1814932809611691,0.6875345156997102,25.54992048360352,2,1,33,SAT,0,0,0.8087,Mixed evidence (support + contradict); prediction uses score/threshold.
+46,train,0,-1.4275314900700586,1.1531268624344457,1.2903291762522522,42.320423403470095,2,2,56,SAT,0,0,0.8075,Mixed evidence (support + contradict); prediction uses score/threshold.
+48,train,1,0.5156001882751857,1.7504194385207443,0.6174096251227793,15.39223208322419,3,1,20,SAT,0,0,0.823,Mixed evidence (support + contradict); prediction uses score/threshold.
+50,train,1,0.9520316231629997,2.3305045784572274,0.6892364776471138,24.04760552558108,3,1,32,SAT,0,0,0.8802,Mixed evidence (support + contradict); prediction uses score/threshold.
+54,train,1,0.4607356301361224,1.4424433414689504,0.490853855666414,28.10370154168613,2,1,33,SAT,0,0,0.8677,Mixed evidence (support + contradict); prediction uses score/threshold.
+55,train,1,1.5046850761893777,1.5046850761893777,0.0,16.865997712421073,2,0,22,SAT,0,0,0.8522,Evidence supports the backstory claims; no hard contradictions detected.
+57,train,1,1.256159984006512,1.256159984006512,0.0,15.907390483323411,2,0,22,SAT,0,0,0.8292,Evidence supports the backstory claims; no hard contradictions detected.
+62,train,1,0.09328940040781175,2.798398306066591,1.3525544528293896,23.06128584318128,4,2,30,SAT,0,0,0.8727,Mixed evidence (support + contradict); prediction uses score/threshold.
+63,train,1,1.3814679307117137,1.3814679307117137,0.0,8.41297543459391,2,0,10,SAT,0,0,0.8492,Evidence supports the backstory claims; no hard contradictions detected.
+65,train,0,-2.3566399199919306,1.024323671565718,1.6904817957788243,23.056507709248336,2,3,31,SAT,0,0,0.7931,Mixed evidence (support + contradict); prediction uses score/threshold.
+66,train,1,0.71174552869285,0.71174552869285,0.0,19.06850760336427,1,0,23,SAT,0,0,0.8303,Evidence supports the backstory claims; no hard contradictions detected.
+67,train,1,2.533505680209962,2.533505680209962,0.0,35.91429681703059,4,0,44,SAT,0,0,0.8188,Evidence supports the backstory claims; no hard contradictions detected.
+68,train,1,2.755837160808338,2.755837160808338,0.0,34.7670512025896,4,0,44,SAT,0,0,0.8349,Evidence supports the backstory claims; no hard contradictions detected.
+69,train,0,-2.2933376913688557,1.7100785033221007,2.001708097345478,44.05241534916174,3,3,54,SAT,0,0,0.8226,Mixed evidence (support + contradict); prediction uses score/threshold.
+71,train,0,-1.3355698940661163,2.527025196719864,1.9312975453929901,43.7229419927548,4,3,53,SAT,0,0,0.8269,Mixed evidence (support + contradict); prediction uses score/threshold.
+73,train,1,0.5928171721864377,0.5928171721864377,0.0,7.867489295819601,1,0,11,SAT,0,0,0.8066,Evidence supports the backstory claims; no hard contradictions detected.
+74,train,1,0.6599117810665766,0.6599117810665766,0.0,8.800859269377893,1,0,11,SAT,0,0,0.82,Evidence supports the backstory claims; no hard contradictions detected.
+76,train,1,1.3277671319923874,1.3277671319923874,0.0,18.412291183735615,2,0,22,SAT,0,0,0.8233,Evidence supports the backstory claims; no hard contradictions detected.
+79,train,0,-0.6487127580504978,0.6227260064166228,0.6357193822335603,17.843317159529807,1,1,22,SAT,0,0,0.8125,Mixed evidence (support + contradict); prediction uses score/threshold.
+83,train,1,4.138805817426168,4.138805817426168,0.0,33.56557694953563,6,0,42,SAT,0,0,0.8583,Evidence supports the backstory claims; no hard contradictions detected.
+84,train,1,1.8066247437355405,1.8066247437355405,0.0,27.46643759733384,3,0,33,SAT,0,0,0.8318,Evidence supports the backstory claims; no hard contradictions detected.
+88,train,0,-2.361933662943139,0.0,1.1809668314715696,16.67397078272689,0,2,22,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+89,train,1,0.3706107477505127,1.5759837749113272,0.6026865135804073,15.52954864720193,3,1,20,SAT,0,0,0.8001,Mixed evidence (support + contradict); prediction uses score/threshold.
+90,train,0,-3.136411855344333,1.5202815764218984,2.3283467158831157,13.54500976873318,2,3,19,SAT,0,0,0.8644,Mixed evidence (support + contradict); prediction uses score/threshold.
+92,train,0,-8.242361075070498,0.0,4.121180537535249,20.59075265099896,0,6,30,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+96,train,0,-2.365097284570641,0.485036631199097,1.425066957884869,15.273189424617009,1,2,21,SAT,0,0,0.785,Mixed evidence (support + contradict); prediction uses score/threshold.
+98,train,1,1.2048663140597695,1.2048663140597695,0.0,6.737202606420323,2,0,10,SAT,0,0,0.8379,Evidence supports the backstory claims; no hard contradictions detected.
+99,train,0,-1.469773168531832,1.2201274051424353,1.3449502868371337,14.376155462025181,2,2,20,SAT,0,0,0.8126,Mixed evidence (support + contradict); prediction uses score/threshold.
+100,train,0,-0.8003901247404737,0.6061049160543588,0.7032475203974162,17.28294557279079,1,1,22,SAT,0,0,0.8092,Mixed evidence (support + contradict); prediction uses score/threshold.
+102,train,0,-4.331003875073349,0.0,2.1655019375366744,15.70979064067714,0,3,21,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+104,train,0,-2.9612828102014093,0.0,1.4806414051007046,18.130143147943432,0,2,22,SAT,0,0,0.8,Contradicting evidence found and no supporting evidence; defaulting to 0.
+105,train,0,-2.8233026644104546,0.0,1.4116513322052273,8.106398496238846,0,2,10,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+106,train,1,1.7079313369646663,3.231420466835487,0.7617445649354104,20.287249225838117,6,1,29,SAT,0,0,0.8376,Mixed evidence (support + contradict); prediction uses score/threshold.
+107,train,0,-2.4463178621545656,1.7200662390888364,2.083192050621701,22.87780478788801,3,3,30,SAT,0,0,0.8273,Mixed evidence (support + contradict); prediction uses score/threshold.
+108,train,0,-0.9831095392821527,1.8600195147359007,1.4215645270090267,14.92277784117015,3,2,19,SAT,0,0,0.826,Mixed evidence (support + contradict); prediction uses score/threshold.
+109,train,0,-2.7724862106412695,0.0,1.3862431053206348,17.320914878455802,0,2,22,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+112,train,0,-1.3965232484744807,1.2575473716116603,1.3270353100430705,14.428980038727685,2,2,20,SAT,0,0,0.8157,Mixed evidence (support + contradict); prediction uses score/threshold.
+113,train,0,-3.6535569675437305,0.0,1.8267784837718652,18.102840137375917,0,2,22,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+116,train,0,0.0,0.0,0.0,8.03450875084417,0,0,12,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+117,train,1,1.2501070462961161,1.2501070462961161,0.0,16.44739405405467,2,0,22,SAT,0,0,0.8289,Evidence supports the backstory claims; no hard contradictions detected.
+118,train,0,-0.6012013933904907,0.6442987145576082,0.6227500539740495,17.282243316599395,1,1,22,SAT,0,0,0.8169,Mixed evidence (support + contradict); prediction uses score/threshold.
+120,train,0,-1.4709834195916123,0.6171364456415176,1.044059932616565,16.236438916467073,1,2,21,SAT,0,0,0.8114,Mixed evidence (support + contradict); prediction uses score/threshold.
+122,train,0,-2.6647370566194835,0.0,1.3323685283097417,7.1085766072094465,0,2,10,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+123,train,0,-1.0948110971552767,0.0,0.5474055485776383,8.127550667780193,0,1,11,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+125,train,0,-5.883304891413605,0.0,2.9416524457068025,14.290054880280016,0,4,20,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+126,train,0,-2.3811895283188935,0.0,1.1905947641594468,17.541224871658905,0,2,22,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+128,train,0,0.0,0.0,0.0,9.736275887821593,0,0,12,SAT,0,0,0.0,No supporting evidence; defaulting to 0.
+130,train,0,-4.585270305691773,0.0,2.2926351528458864,6.230256173283161,0,3,9,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+134,train,1,0.5806721492328225,0.5806721492328225,0.0,19.304846618796837,1,0,23,SAT,0,0,0.8041,Evidence supports the backstory claims; no hard contradictions detected.
+137,train,0,-5.8239882008093815,0.0,2.9119941004046908,16.413900488589103,0,4,20,SAT,0,0,0.0,Contradicting evidence found and no supporting evidence; defaulting to 0.
+138,train,1,0.10757005681575227,1.5186045711673284,0.7055172571757881,23.74544686477714,2,1,33,SAT,0,0,0.8425,Mixed evidence (support + contradict); prediction uses score/threshold.
+139,train,0,-4.259931731814427,0.6475839585065841,2.4537578451605055,14.36227064182054,1,4,19,SAT,0,0,0.8175,Mixed evidence (support + contradict); prediction uses score/threshold.

@@ -1,0 +1,11 @@
+numpy>=1.23
+pandas>=2.0
+pyyaml>=6.0
+
+[api]
+fastapi>=0.110
+uvicorn>=0.23
+pydantic>=2.0
+
+[pathway]
+pathway>=0.15

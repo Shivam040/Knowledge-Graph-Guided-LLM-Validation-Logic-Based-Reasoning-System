@@ -1,0 +1,7 @@
+pandas
+pyyaml
+pathway
+numpy
+spacy
+transformers
+torch

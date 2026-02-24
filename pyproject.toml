@@ -1,0 +1,26 @@
+[project]
+name = "kdsh-trackA-mvp"
+version = "0.1.0"
+description = "KDSH Track A data-centric MVP (Pathway-ready) refactor"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+api = [
+  "fastapi>=0.110",
+  "uvicorn>=0.23",
+  "pydantic>=2.0",
+]
+pathway = [
+  "pathway>=0.15",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
