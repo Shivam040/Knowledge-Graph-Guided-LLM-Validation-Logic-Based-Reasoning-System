@@ -1,0 +1,141 @@
+id,split,prediction,evidence_score,support_weight,contradict_weight,neutral_weight,support_n,contradict_n,neutral_n,status,hard_violations,soft_violations,logic_conf,rationale
+2,test,1,-27.039551617724015,0.0,14.830879813441083,17.48138672772101,0,17,19,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+3,test,1,-14.029637308799108,0.0,8.066764791811837,14.025948498830436,0,9,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+7,test,1,-36.06710106934466,0.0,19.069770086722198,13.81626069399826,0,21,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+15,test,1,-2.023454855465585,0.0,1.702999688024045,9.216963470550033,0,2,10,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+16,test,1,-0.30344202243130036,0.0,1.7032729622110998,20.687359346605994,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+21,test,0,-41.69803970454311,0.0,20.908828300854772,0.7974459811095163,0,23,1,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+22,test,1,-19.41954074863674,0.0,11.319169806904915,21.45865910115393,0,13,23,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+24,test,1,-10.022768400608658,0.0,6.201067066875183,15.862438220944723,0,7,17,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+27,test,1,-20.314498883293417,0.0,10.989378449318968,11.095053435630126,0,12,12,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+28,test,0,-71.12529205936357,0.7109157638401662,36.3970561849952,6.38603031191111,1,40,7,SAT,0,0,0.8078,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+30,test,0,-56.550774461726235,0.0,29.400756683042545,15.004926029059027,0,32,16,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+33,test,1,-7.825506988675705,0.0,4.407815689676896,6.600829271187253,0,5,7,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+37,test,0,-76.19670599912862,0.0,40.05434440859066,26.079885453684593,0,44,28,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+38,test,0,-42.46611167617701,0.0,22.077342347124375,11.257153453811611,0,24,12,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+42,test,1,-32.07584767536251,0.7258893844653683,17.520920662650468,14.934028436487033,1,19,16,SAT,0,0,0.8131,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+44,test,0,-39.7615902978497,0.6951020184316057,21.078621811336756,11.337008709281378,1,23,12,SAT,0,0,0.8023,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+47,test,1,-31.6946556077207,0.0,16.18857780386035,4.55,0,17,7,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+49,test,1,-2.690335339676557,0.0,1.9273375244809268,7.7622647285686455,0,2,10,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+51,test,1,-17.55567441069417,0.0,9.460337205347084,9.1,0,10,14,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+52,test,1,-10.068231457659934,0.0,6.110685460153168,14.354263084309343,0,7,17,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+53,test,1,-19.31127206742395,0.0,11.330995748295445,22.33812952777961,0,12,24,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+56,test,1,-22.104325758883718,0.0,11.746280488285054,9.25490145124261,0,13,11,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+58,test,1,-18.443888455355477,0.0,10.72014237235752,19.97597526239709,0,12,24,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+59,test,1,-9.150836032047721,0.0,5.4923156444370065,12.225301712175282,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+60,test,1,1.157685300052521,0.0,0.8976301038714585,19.68630338530292,0,1,23,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+61,test,1,-13.111714128840827,0.0,7.485213863082791,12.391423982165033,0,8,16,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+64,test,1,-32.44574244446955,0.0,17.22624602052924,13.378330643926155,0,19,17,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+70,test,1,-31.45473564781322,0.0,17.7661725596341,27.184063143033214,0,19,29,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+72,test,1,-23.65509724024688,0.0,12.541065141985314,9.513553624824985,0,14,10,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+75,test,1,5.8593993292061315,0.7408748814117164,0.0,34.123496318629435,1,0,35,SAT,0,0,0.8183,Supporting evidence present; no hard contradictions detected.
+77,test,1,-0.3073765900640826,0.0,0.943418566769293,10.52973695649669,0,1,11,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+78,test,0,-63.3052782708432,0.0,33.35324376313613,22.674728369526996,0,36,24,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+80,test,1,-13.04824926954632,0.0,10.841519645905805,57.56526681510194,0,12,60,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+81,test,0,-42.337113894442034,0.0,22.91066245319641,23.228073413005227,0,24,24,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+82,test,1,-10.73804331285765,2.3739853276984513,8.24992295256624,22.5854484305092,3,9,24,SOFT_VIOLATIONS,0,1,0.9959,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+85,test,1,3.4555548419744975,0.0,0.0,23.037032279829983,0,0,24,SAT,0,0,0.0,Only neutral evidence; treated as weak support (alpha=0.15).
+86,test,1,3.512303258116598,0.5772210138957065,0.9846664547920227,32.69610102536625,1,1,34,SAT,0,0,0.761,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+87,test,1,-8.449018501279674,0.0,6.226212818571961,26.689380905761652,0,7,29,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+91,test,1,-14.55262912543244,0.0,8.990434480673562,22.854932239431236,0,10,26,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+93,test,1,-8.155773192272164,0.0,5.260136568542297,15.763332965416193,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+94,test,1,-4.393345204381027,0.0,3.572421886127571,18.343323785827437,0,4,20,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+95,test,1,-20.757508301438776,0.0,11.80632401715122,19.03426488575774,0,13,23,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+97,test,1,-4.24143139332916,0.0,3.4833272243036117,18.168153701853758,0,4,20,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+101,test,1,-5.682277270483565,0.0,4.103084109252859,16.82593965348102,0,5,19,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+103,test,1,-0.7998389668399102,0.0,1.8987640959895233,19.98459483426091,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+110,test,1,0.832731599123318,4.287697383449948,3.505696332770621,23.70951254143075,6,4,26,SOFT_VIOLATIONS,0,1,0.9977,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+111,test,1,1.6484160783301114,0.0,0.0,10.989440522200743,0,0,12,SAT,0,0,0.0,Only neutral evidence; treated as weak support (alpha=0.15).
+114,test,1,1.6007071347301867,0.0,0.7694163741502965,20.930265886871865,0,1,23,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+115,test,1,-0.3754262356452087,0.0,1.7070482494394121,20.25780175489077,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+119,test,1,1.1733018982464527,0.0,0.9715794393938126,20.776405180227187,0,1,23,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+121,test,1,-4.96434157593802,0.0,3.7280468835432847,16.611681274323665,0,4,20,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+124,test,1,-8.611008079878003,0.0,4.646754039939001,4.55,0,5,7,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+127,test,1,-2.1209465398634064,0.0,1.7205288602962823,8.800741204861053,0,2,10,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+129,test,1,-14.237541495930376,0.0,7.313770747965188,2.6,0,8,4,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+131,test,1,2.1193998724440846,0.754940663151351,0.7581695312093829,19.205321811409995,1,1,22,SAT,0,0,0.8232,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+132,test,1,-13.521431548754505,0.0,7.784450486009177,13.649796155092334,0,9,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+133,test,1,-18.949751398150926,1.2490619539916703,10.741638320334292,8.563088590173257,2,12,10,SOFT_VIOLATIONS,0,1,0.9961,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+135,test,1,-2.5336412966003827,0.0,3.4231981747146034,28.751700352192163,0,4,32,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+136,test,1,-5.929529988064255,0.0,4.256016743994049,17.216689999492296,0,5,19,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+140,test,1,3.333712202606322,0.0,0.0,22.224748017375482,0,0,24,SAT,0,0,0.0,Only neutral evidence; treated as weak support (alpha=0.15).
+1,train,1,-27.821252676626056,0.0,15.242242053806871,17.754876206584566,0,17,19,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+4,train,1,-34.79391355309818,0.0,17.67052323346138,3.6475527588305616,0,20,4,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+5,train,1,-7.723761797151241,0.0,5.083085523687971,16.282728334831337,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+6,train,1,-33.69683355598168,10.447182453532362,22.84599237718731,10.319791632403913,12,25,11,SOFT_VIOLATIONS,0,1,0.995,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+8,train,1,-4.104493887757003,0.0,3.4405865075854694,18.511194182759574,0,4,20,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+9,train,1,-23.426151799129286,0.0,12.420936130735718,9.438136415614338,0,14,10,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+10,train,0,-37.53120716309341,0.0,18.969100099815552,2.7132869102512593,0,21,3,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+11,train,1,-27.389491741974293,0.0,14.236074298476492,7.217712366524596,0,16,8,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+12,train,1,-18.16269367759252,0.0,10.0006686647643,12.257624346240508,0,11,13,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+13,train,1,-11.716080061129356,0.0,6.986191257535484,15.042016359610757,0,8,16,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+14,train,1,-20.786870305865058,1.8423220358575372,12.698592557602494,18.453285156549278,2,14,20,SAT,0,0,0.8894,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+17,train,1,-6.013450659873783,0.0,5.898199719437268,38.55299186000502,0,7,41,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+18,train,1,-20.732685629997796,0.0,11.979761860275454,21.51225393702075,0,13,23,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+19,train,1,-1.158349087515182,1.620554580501598,2.7100087046415284,17.607424941775182,2,3,19,SOFT_VIOLATIONS,0,1,0.9963,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+20,train,1,-8.133558195072009,0.0,5.33252674361919,16.876635281109134,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+23,train,1,-28.70194807834823,0.0,15.66702620516032,17.547362213149402,0,17,19,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+25,train,1,-21.955217830246074,0.0,11.74632879645954,10.249598417820046,0,13,11,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+26,train,1,-30.785926915392526,0.0,17.420190997625088,27.029700532384336,0,19,29,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+29,train,0,-22.39468942797772,0.0,11.19734471398886,0.0,0,12,0,SAT,0,0,0.0,Only contradicting evidence found; predicting 0.
+31,train,1,-36.811572738165125,0.0,19.441990228646983,13.816051460858937,0,21,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+32,train,1,-32.79286733708762,0.0,16.81763018536444,5.615953557608386,0,18,6,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+34,train,1,-7.348420292802201,0.0,4.9445002078827605,16.937200819755468,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+35,train,0,-44.435111326662536,0.0,22.988112685607756,10.274093630353192,0,25,11,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+36,train,1,1.7152897609822773,0.0,0.0,11.435265073215183,0,0,12,SAT,0,0,0.0,Only neutral evidence; treated as weak support (alpha=0.15).
+39,train,1,-34.430921160241866,0.8079695605773679,18.672935973345293,14.046541505809007,1,20,15,SAT,0,0,0.8418,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+40,train,1,-20.218312246654577,0.0,10.910161076099651,10.680066036964831,0,12,12,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+41,train,1,-25.909181041792372,0.0,14.365748601261195,18.81544107153346,0,16,20,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+43,train,0,-37.099062808197836,0.693601246378521,19.03343071034915,1.8279824408129521,1,21,2,SAT,0,0,0.8018,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+45,train,0,-36.87071631701517,0.0,19.50545839619748,14.268003169198582,0,21,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+46,train,1,-6.829053018558422,0.9730161786079408,7.3524603237104795,46.01900966836397,1,8,51,SAT,0,0,0.8996,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+48,train,1,-0.2298232217708942,0.0,1.6073221503804984,19.898807193267352,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+50,train,1,-8.94047365304912,0.0,6.454760429190136,26.460314702207686,0,7,29,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+54,train,1,-19.394512536244815,0.0,11.307284333950612,21.46704087770939,0,12,24,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+55,train,1,-2.365141454215883,0.0,2.665303797799079,19.769774275881833,0,3,21,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+57,train,1,-8.447696151647536,0.0,5.306372651062794,14.433661003187023,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+62,train,1,-23.008171363888387,0.0,12.998398102511903,19.924165607569456,0,14,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+63,train,1,-2.3840467703248374,0.0,1.8749056904810755,9.10509740424876,0,2,10,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+65,train,1,-9.171720020803038,0.0,6.24354059862255,22.102407842947084,0,7,29,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+66,train,1,-12.86055693806365,0.0,7.464049156370584,13.783609164516786,0,8,16,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+67,train,1,-17.03151353431258,0.0,11.093047120041883,34.36387137180789,0,12,36,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+68,train,1,-13.659420531054003,0.0,9.512138763740607,35.76571330951473,0,10,38,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+69,train,0,-40.23243029479706,0.8891602516174316,22.975240511047904,32.192603171208745,1,25,34,SAT,0,0,0.8702,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+71,train,0,-50.445621952661504,0.0,27.332023871754327,28.122838605647676,0,30,30,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+73,train,1,-13.65896229397075,0.0,7.098984262215348,3.5933748697329673,0,8,4,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+74,train,1,-13.384328993158936,0.0,6.976803705632348,3.7951894540384004,0,8,4,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+76,train,1,-10.597054068899808,0.0,6.502072342831437,16.047270778420444,0,7,17,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+79,train,1,-14.563377729544818,0.0,8.327097026572577,13.938775490668908,0,9,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+83,train,1,-15.589577555177687,1.4932698905224608,10.989768442290869,32.6445962592106,2,12,34,SOFT_VIOLATIONS,0,1,0.9963,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+84,train,1,-26.346001658075878,0.0,14.613845933113844,19.21126805434539,0,16,20,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+88,train,1,3.254773404236358,0.0,0.0,21.69848936157572,0,0,24,SAT,0,0,0.0,Only neutral evidence; treated as weak support (alpha=0.15).
+89,train,1,-0.7697919816684005,0.0,1.7997629376559345,18.86489262428979,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+90,train,1,-15.008399887127785,0.0,8.313331754428667,10.788424144863656,0,9,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+92,train,1,-30.38166088512642,0.0,16.236390156242493,13.940796182390454,0,18,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+96,train,1,-0.7275709916849218,0.0,1.8722546191857945,20.11292164457778,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+98,train,1,-12.179610394297457,0.0,6.371428094832144,3.7549719691122005,0,7,5,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+99,train,1,0.17001637682142334,1.174711663530014,1.865629801981973,18.177095448369037,2,2,20,SOFT_VIOLATIONS,0,1,0.9917,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+100,train,1,-7.1156461171458325,0.0,4.660690998358945,14.704905863813716,0,5,19,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+102,train,1,3.2877435642162247,0.0,0.0,21.918290428108165,0,0,24,SAT,0,0,0.0,Only neutral evidence; treated as weak support (alpha=0.15).
+104,train,1,-2.801137563736919,0.0,2.8011128861796064,18.67392139081529,0,3,21,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+105,train,1,-2.235658280291623,0.0,1.7844218332783117,8.887902575100002,0,2,10,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+106,train,1,0.2551614820506778,3.8967182444243544,3.610262906045846,23.85979366478677,5,4,27,SOFT_VIOLATIONS,0,1,0.9938,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+107,train,1,-17.37650747536535,4.3086881383652775,11.958191843072925,14.874587149434817,5,13,18,SOFT_VIOLATIONS,0,1,0.9973,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+108,train,1,-13.487249122311436,0.6565348320517771,8.023625478005028,12.689780010978954,1,9,14,SAT,0,0,0.7888,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+109,train,1,-12.588796067696348,0.0,7.337165268575671,13.90356312969995,0,8,16,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+112,train,1,-0.4125780452364207,2.7501238529308845,2.590805256191344,13.459390761435891,4,3,17,SOFT_VIOLATIONS,0,1,0.9941,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+113,train,1,-0.5225457020292987,0.0,1.7479119727400985,19.821854956339322,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+116,train,1,-6.290219645470337,0.0,3.5515915654594656,5.419756569657296,0,4,8,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+117,train,1,-3.861385119175146,0.693468928481936,3.5146911106820573,16.49685449138022,1,4,19,SAT,0,0,0.8017,Mixed evidence (support/neutral with contradictions); prediction uses score/threshold.
+118,train,1,-6.567474873599052,0.0,4.519809324618528,16.480958504253362,0,5,19,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+120,train,1,-8.13722063264507,0.0,5.309035823050823,16.539006756377177,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+122,train,1,-0.4917212623997713,0.0,0.888098716552851,8.563174471372871,0,1,11,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+123,train,1,-0.6041816135655631,0.0,0.8740890472805083,7.6266432066363565,0,1,11,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+125,train,1,-14.777737155457729,0.0,8.171255949331632,10.431831621370247,0,9,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+126,train,1,3.219179572408769,0.0,0.0,21.461197149391793,0,0,24,SAT,0,0,0.0,Only neutral evidence; treated as weak support (alpha=0.15).
+128,train,1,-0.33202563733050194,0.0,0.9676970451008337,10.689123019141103,0,1,11,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+130,train,1,-8.304735119073133,0.0,4.571766591303495,5.591987090225723,0,5,7,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+134,train,1,4.078410215434473,0.8746159583673034,0.0,21.358628380447794,1,0,23,SAT,0,0,0.8651,Supporting evidence present; no hard contradictions detected.
+137,train,1,-0.9822895867964747,0.0,1.8552919485486514,18.188628735338856,0,2,22,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+138,train,1,-36.653801865084276,0.0,19.30821378814313,13.084171408013228,0,21,15,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
+139,train,1,-8.658035439639571,0.0,5.444345339167549,14.871034924636856,0,6,18,SAT,0,0,0.0,Neutral/contradict mix; score penalizes contradictions.
