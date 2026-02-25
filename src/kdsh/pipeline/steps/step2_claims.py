@@ -10,6 +10,40 @@ import regex as re2
 
 from kdsh.common.utils import STOPWORDS
 
+
+def _build_book_name_map(out_silver: Path) -> Dict[str, str]:
+    """
+    Map case-insensitive book_name (from train/test) -> canonical book_name used in chunks/ingest.
+    This prevents retrieval from returning 0 rows when casing differs (e.g. 'In Search...' vs 'In search...').
+    """
+    # Prefer novel_registry.csv (authoritative)
+    nr = out_silver / "novel_registry.csv"
+    if nr.exists():
+        try:
+            df = pd.read_csv(nr)
+            if "book_name" in df.columns:
+                return {str(b).casefold(): str(b) for b in df["book_name"].dropna().unique()}
+        except Exception:
+            pass
+
+    # Fallback: chunks.csv
+    cp = out_silver / "chunks.csv"
+    if cp.exists():
+        try:
+            df = pd.read_csv(cp, usecols=["book_name"])
+            return {str(b).casefold(): str(b) for b in df["book_name"].dropna().unique()}
+        except Exception:
+            pass
+
+    return {}
+
+def _canonical_book_name(raw_name: str, book_name_map: Dict[str, str]) -> str:
+    if raw_name is None:
+        return ""
+    key = str(raw_name).casefold()
+    return book_name_map.get(key, str(raw_name))
+
+
 # IMPORTANT: Do NOT split on commas.
 # Novels use commas for appositives that encode facts:
 #   "Lord Glenarvan and his wife, Lady Helena, ..."
@@ -80,7 +114,7 @@ _TITLED_NAME = rf"(?:{_TITLES}\s+{_NAME}|{_NAME})"
 def char_aliases(char: str) -> List[str]:
     """
     Novel-friendly aliases:
-    - supports titles + abbreviations: M., Mme., Mlle., Lord, Lady, Count, etc.
+    - supports titles + abbreviations: M., Mme., Mlle., Lord, Lady,
     - adds first + last tokens
     - adds both 'Mr Last' and 'Mr. Last' forms
     """
@@ -149,7 +183,6 @@ def split_into_claims(text: str, max_claims: int = 80) -> List[str]:
 
         for c in clauses:
             words = c.split()
-            low = c.lower()
 
             is_facty = bool(_FACTY_RE.search(c))
 
@@ -171,28 +204,6 @@ def split_into_claims(text: str, max_claims: int = 80) -> List[str]:
 
     return claims[:max_claims]
 
-def guess_claim_type(claim: str) -> str:
-    c = claim.lower()
-    if any(k in c for k in ["believe", "thinks", "distrust", "fears", "hates", "loves", "wants", "refused"]):
-        return "BELIEF"
-    if any(k in c for k in ["married", "wife", "husband", "betrothed", "engaged",
-                            "brother", "sister", "father", "mother", "son", "daughter", "child", "parent",
-                            "known as", "called", "named"]):
-        return "RELATION"
-    if any(k in c for k in ["born", "raised", "grew up", "childhood", "origin", "background"]):
-        return "BACKGROUND"
-    return "EVENT"
-
-def guess_time_hint(claim: str) -> str:
-    c = claim.lower()
-    if any(k in c for k in ["childhood", "as a child", "early", "before", "at first", "initially", "young"]):
-        return "EARLY"
-    if any(k in c for k in ["later", "eventually", "after years", "in the end", "finally", "towards the end"]):
-        return "LATE"
-    if any(k in c for k in ["midway", "in between", "during"]):
-        return "MID"
-    return "UNK"
-
 def keywords_from_text(text: str, k: int = 12) -> List[str]:
     # Unicode-safe tokenization
     words = re2.findall(r"[\p{L}][\p{L}\p{M}\-']+", str(text or "").lower())
@@ -207,93 +218,91 @@ def _q(s: str) -> str:
     s = str(s or "").strip().replace('"', "'")
     return f'"{s}"'
 
-def predicate_form(char: str, claim: str) -> List[str]:
+def _mentions_any_alias(text: str, aliases: List[str]) -> bool:
+    t = normalize_ws(text).lower()
+    for a in aliases or []:
+        aa = normalize_ws(a).lower()
+        if not aa:
+            continue
+        # For single-token aliases, use word boundaries. For multi-token, substring match.
+        if " " not in aa and len(aa) >= 2:
+            if re.search(rf"\b{re.escape(aa)}\b", t):
+                return True
+        else:
+            if aa in t:
+                return True
+    return False
+
+_LEADING_POSSESSIVE = re.compile(r"^(his|her|their)\b\s*", re.IGNORECASE)
+_LEADING_SUBJECT_PRON = re.compile(r"^(he|she|they)\b\s*", re.IGNORECASE)
+_LEADING_OBJECT_PRON = re.compile(r"^(him|her|them)\b\s*", re.IGNORECASE)
+
+# Nouny “fragment starters” common in summaries
+_LEADING_NOUN_START = re.compile(r"^(boyhood|childhood|youth|mother|father|parents?)\b\s*", re.IGNORECASE)
+
+def make_claim_standalone(char: str, aliases: List[str], claim: str) -> str:
     """
-    Generate predicates that actually appear in these novels.
-    (Unicode-safe names + M./Mme./Lord/Lady handling)
+    Ensure the hypothesis is *self-contained* for NLI:
+    - If an alias is already mentioned, keep as-is.
+    - Else, resolve leading pronouns/fragments by anchoring to the character.
+    This is intentionally conservative: it only rewrites the start of the clause.
     """
     c = normalize_ws(claim)
-    low = c.lower()
-    preds: List[str] = []
+    if not c:
+        return c
+    if _mentions_any_alias(c, aliases):
+        return c
 
-    # BornIn / BornAt (rare but keep)
-    m = re2.search(rf"\bborn\s+(?:in|at)\s+(?P<place>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
+    # Normalize leading pronouns/fragments
+    m = _LEADING_POSSESSIVE.match(c)
     if m:
-        place = normalize_ws(m.group("place")).rstrip(".,;:!")
-        preds.append(f"BornIn({_q(char)}, {_q(place)})")
+        # 'his mother ...' -> "<CHAR>'s mother ..."
+        rest = c[m.end():].lstrip()
+        anchored = f"{char}'s {rest}"
+        return anchored
 
-    # Died
-    if any(k in low for k in [" died", "dead", "killed", "executed", "passed away"]):
-        preds.append(f"Died({_q(char)})")
+    m = _LEADING_SUBJECT_PRON.match(c)
+    if m:
+        # 'he ...' -> '<CHAR> ...'
+        rest = c[m.end():].lstrip()
+        anchored = f"{char} {rest}"
+        return anchored
 
-    # MarriedTo
-    m2 = re2.search(rf"\bmarried\b(?:\s+to\s+)?(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-    if m2:
-        other = normalize_ws(m2.group("o")).rstrip(".,;:!")
-        preds.append(f"MarriedTo({_q(char)}, {_q(other)})")
-    else:
-        # "his wife, Lady Helena" / "her husband, X"
-        m2b = re2.search(rf"\b(?:wife|husband)\b[^\p{{L}}]{{0,20}}(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-        if m2b:
-            other = normalize_ws(m2b.group("o")).rstrip(".,;:!")
-            preds.append(f"MarriedTo({_q(char)}, {_q(other)})")
+    m = _LEADING_OBJECT_PRON.match(c)
+    if m:
+        rest = c[m.end():].lstrip()
+        anchored = f"{char} {rest}"
+        return anchored
 
-    # BetrothedTo / EngagedTo (VERY common in Monte Cristo)
-    m3 = re2.search(rf"\b(?:betrothed|engaged)\b(?:\s+to\s+)?(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-    if m3:
-        other = normalize_ws(m3.group("o")).rstrip(".,;:!")
-        preds.append(f"BetrothedTo({_q(char)}, {_q(other)})")
-    else:
-        # "<X>'s betrothed was <Y>"
-        m3b = re2.search(
-            rf"(?P<s>{_TITLED_NAME})\s*['’]s\s+betrothed\b.*?\b(?:was|is)\b\s+(?P<o>{_TITLED_NAME})",
-            c,
-            flags=re2.I | re2.V1,
-        )
-        if m3b:
-            other = normalize_ws(m3b.group("o")).rstrip(".,;:!")
-            preds.append(f"BetrothedTo({_q(char)}, {_q(other)})")
+    # 'Mother died ...' / 'Boyhood was ...' -> '<CHAR>'s Mother ...' / '<CHAR>'s boyhood ...'
+    m = _LEADING_NOUN_START.match(c)
+    if m:
+        rest = c[m.start():].lstrip()
+        anchored = f"{char}'s {rest}"
+        return anchored
 
-    # LivesIn / ResidesIn / Dwells (less common but ok)
-    m4 = re2.search(rf"\b(lives|lived|resides|resided|dwells)\s+(?:in|at)\s+(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-    if m4:
-        loc = normalize_ws(m4.group("o")).rstrip(".,;:!")
-        preds.append(f"LivesIn({_q(char)}, {_q(loc)})")
+    # Fallback: prefix with character name
+    anchored = f"{char} {c}"
+    return anchored
 
-    # ChildOf / ParentOf / SiblingOf
-    m5 = re2.search(rf"\b(son|daughter|child)\s+of\s+(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-    if m5:
-        parent = normalize_ws(m5.group("o")).rstrip(".,;:!")
-        preds.append(f"ChildOf({_q(char)}, {_q(parent)})")
-
-    m6 = re2.search(rf"\b(father|mother|parent)\s+of\s+(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-    if m6:
-        child = normalize_ws(m6.group("o")).rstrip(".,;:!")
-        preds.append(f"ParentOf({_q(char)}, {_q(child)})")
-
-    m7 = re2.search(rf"\b(brother|sister)\s+of\s+(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-    if m7:
-        sib = normalize_ws(m7.group("o")).rstrip(".,;:!")
-        preds.append(f"SiblingOf({_q(char)}, {_q(sib)})")
-
-    # KnownAs (EXTREMELY common in Monte Cristo)
-    m8 = re2.search(rf"\b(?:was\s+called|called|known\s+as|named)\s+(?P<o>{_TITLED_NAME})", c, flags=re2.I | re2.V1)
-    if m8:
-        aka = normalize_ws(m8.group("o")).rstrip(".,;:!")
-        preds.append(f"KnownAs({_q(char)}, {_q(aka)})")
-
-    if not preds:
-        safe = c.replace('"', "'")
-        preds.append(f'Claim({_q(char)}, "{safe}")')
-
-    return preds
+def predicate_form(char: str, claim: str) -> List[str]:
+    """
+    Refactor v1: NO relation extraction here.
+    This step only emits a generic Claim(...) predicate.
+    Downstream verification + extraction should decide what becomes a KG triple.
+    """
+    c = normalize_ws(claim).replace('"', "'")
+    return [f'Claim({_q(char)}, "{c}")']
 
 def step2_build_claims(train_df: pd.DataFrame, test_df: pd.DataFrame, out_silver: Path, run_id: str) -> Path:
+    book_name_map = _build_book_name_map(out_silver)
+
     def build_rows(df: pd.DataFrame, split: str) -> List[Dict[str, Any]]:
         rows: List[Dict[str, Any]] = []
         for _, r in df.iterrows():
             ex_id = int(r["id"])
-            book_name = str(r["book_name"])
+            raw_book_name = str(r["book_name"])
+            book_name = _canonical_book_name(raw_book_name, book_name_map)
             char = str(r["char"]).strip()
             caption = None if pd.isna(r.get("caption", None)) else str(r.get("caption"))
             content = str(r["content"])
@@ -302,10 +311,13 @@ def step2_build_claims(train_df: pd.DataFrame, test_df: pd.DataFrame, out_silver
             cap = "" if caption is None else str(caption).strip()
 
             claims = split_into_claims(content, max_claims=80)
-            for i, cl in enumerate(claims, start=1):
+            for i, raw in enumerate(claims, start=1):
                 cid = f"{ex_id}_c{i:02d}"
 
-                kw = keywords_from_text(cl, k=12)
+                claim_text = make_claim_standalone(char, aliases, raw)
+
+                # Build retrieval keywords from the *standalone* claim (better for NLI + retrieval)
+                kw = keywords_from_text(claim_text, k=12)
                 if cap:
                     kw += keywords_from_text(cap, k=8)
                 for a in aliases:
@@ -315,15 +327,17 @@ def step2_build_claims(train_df: pd.DataFrame, test_df: pd.DataFrame, out_silver
                     dict(
                         id=ex_id,
                         book_name=book_name,
+                        raw_book_name=raw_book_name,
                         char=char,
                         caption=caption,
                         char_aliases=aliases,
                         claim_id=cid,
-                        claim_text=cl,
-                        predicate_form=predicate_form(char, cl),
+                        raw_claim_text=normalize_ws(raw),
+                        claim_text=claim_text,
+                        predicate_form=predicate_form(char, claim_text),
                         keywords=sorted(set(kw)),
-                        claim_type=guess_claim_type(cl),
-                        t_hint=guess_time_hint(cl),
+                        claim_type="UNK",
+                        t_hint="UNK",
                         split=split,
                         run_id=run_id,
                     )
