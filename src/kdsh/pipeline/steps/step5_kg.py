@@ -89,22 +89,54 @@ def excerpt_span(chunk_text: str, needle: str) -> Optional[List[int]]:
     end = min(len(chunk_text), idx + len(needle) + 80)
     return [int(start), int(end)]
 
+def _load_evidence_map(out_silver: Path) -> Dict[Tuple[str, str], Dict[str, Any]]:
+    """
+    Load Step-4 evidence labels (if available) and build a lookup keyed by (claim_id, chunk_id).
+    This lets Step-5 attach:
+      - support_label (SUPPORT/NEUTRAL/CONTRADICT)
+      - evidence_confidence
+      - evidence_text (best sentence used in sentence-level NLI, if present)
+    Backwards compatible: returns empty dict if file not present.
+    """
+    p = out_silver / "evidence_labels.csv"
+    if not p.exists():
+        return {}
+    try:
+        df = pd.read_csv(p)
+    except Exception:
+        return {}
+    out: Dict[Tuple[str, str], Dict[str, Any]] = {}
+    for _, r in df.iterrows():
+        cid = str(r.get("claim_id", "")).strip()
+        chid = str(r.get("chunk_id", "")).strip()
+        if not cid or not chid:
+            continue
+        out[(cid, chid)] = dict(
+            label=str(r.get("label", "")).strip(),
+            confidence=float(r.get("confidence", 0.0) or 0.0),
+            evidence_text=str(r.get("evidence_text", "") or "").strip(),
+        )
+    return out
 
-# def excerpt_span(chunk_text: str, needle: str) -> Optional[List[int]]:
-#     if not chunk_text or not needle:
-#         return None
-#     tl = chunk_text.lower()
-#     nl = str(needle).lower()
-#     idx = tl.find(nl)
-#     if idx == -1:
-#         tok0 = nl.split()[0] if nl.split() else None
-#         if tok0 and tok0 in tl:
-#             idx = tl.find(tok0)
-#         else:
-#             return None
-#     start = max(0, idx - 40)
-#     end = min(len(chunk_text), idx + len(needle) + 80)
-#     return [int(start), int(end)]
+
+def _span_for_evidence(chunk_text: str, evidence_text: str) -> Optional[List[int]]:
+    """
+    Find span for evidence_text inside chunk_text. Falls back to excerpt_span behavior.
+    """
+    if not chunk_text or not evidence_text:
+        return None
+    tl = chunk_text
+    idx = tl.find(evidence_text)
+    if idx >= 0:
+        return [int(idx), int(idx + len(evidence_text))]
+    # try lower-cased match
+    idx = tl.lower().find(evidence_text.lower())
+    if idx >= 0:
+        return [int(idx), int(idx + len(evidence_text))]
+    return None
+
+
+
 
 def step5_build_kg(
     chunks_df: pd.DataFrame,
@@ -143,27 +175,14 @@ def step5_build_kg(
             m[normalize_mention(r["mention"])] = str(r["canonical_entity"])
         alias_map_by_id[int(ex_id)] = m
 
-    # alias_rows = []
-    # for ex_id, char in id_to_char.items():
-    #     if not char:
-    #         continue
-    #     parts = [p for p in re.split(r"\s+", char) if p]
-    #     last = parts[-1] if len(parts) > 1 else None
-    #     alias_rows.append(dict(id=ex_id, book_name=id_to_book.get(ex_id), mention=char, canonical_entity=char, entity_type="CHAR", confidence=1.0, run_id=run_id))
-    #     if last:
-    #         alias_rows.append(dict(id=ex_id, book_name=id_to_book.get(ex_id), mention=last, canonical_entity=char, entity_type="CHAR", confidence=0.65, run_id=run_id))
-    #     for title in ["mr","mrs","ms","miss","count","captain","doctor","dr","sir","madam","monsieur","mademoiselle"]:
-    #         alias_rows.append(dict(id=ex_id, book_name=id_to_book.get(ex_id), mention=f"{title} {last}".title() if last else f"{title} {char}".title(), canonical_entity=char, entity_type="CHAR", confidence=0.35, run_id=run_id))
-
-    # aliases_df = pd.DataFrame(alias_rows).drop_duplicates(subset=["id","mention","canonical_entity"])
-    # aliases_path = out_silver / "aliases.csv"
-    # aliases_df.to_csv(aliases_path, index=False)
 
     facts = [json.loads(l) for l in facts_path.read_text(encoding="utf-8").splitlines() if l.strip()]
     facts_df = pd.DataFrame(facts) if facts else pd.DataFrame()
 
     chunks_meta = chunks_df.set_index("chunk_id")[["book_name","chapter_id","chunk_pos","time_bucket"]].to_dict("index")
     chunks_text = chunks_df.set_index("chunk_id")["chunk_text"].to_dict()
+
+    evidence_map = _load_evidence_map(out_silver)
 
     triple_rows = []
     tid = 1
@@ -177,15 +196,13 @@ def step5_build_kg(
             meta = chunks_meta.get(chunk_id, {})
             txt = chunks_text.get(chunk_id, "")
 
-            # s = r.get("s")
-            # p = r.get("p")
-            # o = r.get("o")
-            # canonical = id_to_char.get(ex_id)
-            # if canonical and isinstance(s, str) and s.strip().lower() == canonical.strip().lower():
-            #     s = canonical
 
-            # span = excerpt_span(txt, str(o)) or excerpt_span(txt, str(p)) or excerpt_span(txt, str(s)) or [0, min(180, len(txt))]
-
+            claim_id = str(r.get("claim_id", "")).strip()
+            # Enrich with Step-4 evidence metadata if available
+            em = evidence_map.get((claim_id, str(chunk_id).strip()), {})
+            support_label = str(r.get("label") or em.get("label") or "").strip()
+            evidence_conf = float(r.get("confidence", em.get("confidence", 0.0)) or 0.0)
+            evidence_text = str(r.get("excerpt") or em.get("evidence_text") or "").strip()
             s = r.get("s")
             p = r.get("p")
             o = r.get("o")
@@ -206,8 +223,17 @@ def step5_build_kg(
 
             # ---- provenance span preference ----
             # If Step 4.5 wrote span_start/span_end, prefer them.
+            # ---- provenance span preference ----
+            # Preference order:
+            # 1) If evidence_text is available (sentence-level NLI), locate it inside chunk_text.
+            # 2) If Step-4 wrote span_start/span_end, prefer them.
+            # 3) Fallback to fuzzy excerpt_span search, else head of chunk.
             span = None
-            if "span_start" in r and "span_end" in r:
+
+            if evidence_text:
+                span = _span_for_evidence(txt, evidence_text)
+
+            if span is None and "span_start" in r and "span_end" in r:
                 try:
                     a = int(r["span_start"])
                     b = int(r["span_end"])
@@ -216,16 +242,22 @@ def step5_build_kg(
                 except Exception:
                     span = None
 
-            # else fallback to search
             if span is None:
-                span = excerpt_span(txt, str(o)) or excerpt_span(txt, str(p)) or excerpt_span(txt, str(s)) or [0, min(180, len(txt))]
-            
+                # fallback to search for object / predicate / subject mentions
+                span = (
+                    excerpt_span(txt, str(o))
+                    or excerpt_span(txt, str(p))
+                    or excerpt_span(txt, str(s))
+                    or [0, min(180, len(txt))]
+                )
 
+            # Ensure excerpt_text is aligned to the chosen span
+            excerpt_text = evidence_text if evidence_text else (txt[span[0]:span[1]] if span else "")
             triple_rows.append(
                 dict(
                     triple_id=f"t_{tid:05d}",
                     id=ex_id,
-                    claim_id=r.get("claim_id"),
+                    claim_id=claim_id,
                     book_name=meta.get("book_name", r.get("book_name")),
                     s=s,
                     p=p,
@@ -233,12 +265,13 @@ def step5_build_kg(
                     time_bucket=meta.get("time_bucket"),
                     polarity=r.get("polarity", "POS"),
                     confidence=float(fc),
+                    evidence_confidence=float(evidence_conf),
                     chunk_id=chunk_id,
                     excerpt_span=span,
-                    excerpt_text = r.get("excerpt"),
+                    excerpt_text=excerpt_text,
                     chapter_id=meta.get("chapter_id"),
                     chunk_pos=meta.get("chunk_pos"),
-                    support_label=r.get("label"),
+                    support_label=support_label,
                     run_id=run_id,
                 )
             )
