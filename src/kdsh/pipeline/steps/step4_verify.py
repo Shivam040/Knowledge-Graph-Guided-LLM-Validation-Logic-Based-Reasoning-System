@@ -486,9 +486,9 @@ def step4_verify(
     top_sentences = int(_cfg_get(verifier_cfg, "top_sentences", int(os.getenv("KDSH_NLI_TOP_SENTS", "5"))))
 
     # label decision knobs (recall-friendly defaults)
-    entail_threshold = float(_cfg_get(verifier_cfg, "entail_threshold", float(os.getenv("KDSH_NLI_ENTAIL_THR", "0.55"))))
-    contra_threshold = float(_cfg_get(verifier_cfg, "contra_threshold", float(os.getenv("KDSH_NLI_CONTRA_THR", "0.80"))))
-    nli_margin = float(_cfg_get(verifier_cfg, "nli_margin", float(os.getenv("KDSH_NLI_MARGIN", "0.05"))))
+    entail_threshold = float(_cfg_get(verifier_cfg, "entail_threshold", float(os.getenv("KDSH_NLI_ENTAIL_THR", "0.65"))))
+    contra_threshold = float(_cfg_get(verifier_cfg, "contra_threshold", float(os.getenv("KDSH_NLI_CONTRA_THR", "0.72"))))
+    nli_margin = float(_cfg_get(verifier_cfg, "nli_margin", float(os.getenv("KDSH_NLI_MARGIN", "0.06"))))
 
     # safety knobs
     enable_alias_gate = _boolish(_cfg_get(verifier_cfg, "enable_alias_gate", os.getenv("KDSH_ALIAS_GATE", "0")), default=False)
